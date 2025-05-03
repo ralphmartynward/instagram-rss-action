@@ -15,9 +15,11 @@ jobs:
         id: rss
         uses: ./
         with:
-          yourInstagram: instagram_handle
-          listOfInstagrams: nytcooking,sohlae,swissmiss,soulfirefarm
-      - name: Commit files
+          yourInstagram: ${{ secrets.IG_USERNAME }}
+          listOfInstagrams: ulyces.co,loopsider,hugodecrypte
+      - env:
+          IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
+        name: Commit files
         if: ${{ success() && steps.rss.outputs.RSS_STATUS == 'success' }}
         run: |
           git config --local user.email "action@github.com"
