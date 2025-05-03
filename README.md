@@ -63,3 +63,4 @@ jobs:
 - `pretty`: Remove hashtags and emoji from captions. Default: `true`.
 
 <!-- END GENERATED DOCUMENTATION -->
+# trigger
